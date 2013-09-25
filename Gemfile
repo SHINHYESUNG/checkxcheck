@@ -10,6 +10,8 @@ gem 'sqlite3'
 gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
                               :github => 'anjlab/bootstrap-rails'
 
+gem 'devise', '~> 3.0.3'
+
 gem "paperclip", "~> 3.0"
 
 # Gems used only for assets and not required
