@@ -29,25 +29,31 @@
   <div class="collapse navbar-collapse navbar-ex1-collapse">
 		<ul class="nav navbar-nav">
 	  	<li class="<%= 'active' if params[:action] == 'index' %>"> 
-			<%= link_to("Home",     { :action => "index",:controller => "site" }) %>
+			<%= link_to("Home",     { :action => "index",:controller => "/site" }) %>
 			</li>
 	  	<li class="<%= 'active' if params[:action] == 'about' %>">
-			<%= link_to("About", { :action => "about",:controller => "site" }) %> 
+			<%= link_to("About", { :action => "about",:controller => "/site" }) %> 
 			</li>
 	  	<li class="<%= 'active' if params[:action] == 'apps' %>">
-			<%= link_to("Apps",     { :action => "apps",:controller => "site"  }) %>
+			<%= link_to("Apps",     { :action => "apps",:controller => "/site"  }) %>
 			</li>
 	  	<li class="<%= 'active' if params[:action] == 'skins' %>">
-			<%= link_to("Skins",     { :action => "skins",:controller => "site"}) %>
+			<%= link_to("Skins",     { :action => "index",:controller => "/products"}) %>
 			</li>
 		</ul>
 		<form class="navbar-form navbar-right">
-		<button class="btn btn-success">Sign up</button>
-		<button class="btn ">Log in </button>
+			 <% if user_signed_in? %>			 
+			   Logged in as <%= current_user.email %>
+				<%= link_to('Log out', destroy_user_session_path, :method => :delete,:class =>"btn btn-warning") %>
+			 <% else %> 
+			  <%= link_to('Sign up', new_user_registration_path , :method => :get,:class =>"btn btn-info") %>
+			  <%= link_to('Log in', new_user_session_path, :method => :get,:class =>"btn btn-primary") %>
+			<% end %>
 		</form>
   </div><!-- navbar-collapse -->
  </div><!-- container-->
 </nav>
+
 
 <%= yield %>
 

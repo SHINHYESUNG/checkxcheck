@@ -1,5 +1,4 @@
 DoubleCheck::Application.routes.draw do
-  devise_for :users
 
   get "site/index"
 
@@ -9,6 +8,15 @@ DoubleCheck::Application.routes.draw do
 
   get "site/skins"
 
+  resources :products
+
+  devise_for :users
+
+	match '/home', :to => 'site#index'
+  match '/about', :to => 'site#about'
+  match '/apps', :to => 'site#apps'
+ 
+   
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
