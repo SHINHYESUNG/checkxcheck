@@ -37,11 +37,10 @@
    			 	</ul>
 					<form class="navbar-form pull-right">
 						 <% if user_signed_in? %>			 
-			  			 Logged in as <%= current_user.email %>
 							<%= link_to('Log out', destroy_user_session_path, :method => :delete,:class =>"btn btn-warning") %>
 			 			<% else %> 
 			 			 <%= link_to('Sign up', new_user_registration_path , :method => :get,:class =>"btn btn-info") %>
-			 			 <%= link_to('Log in', new_user_session_path, :method => :get,:class =>"btn btn-primary") %>
+			 			 <%= link_to('Sign in', new_user_session_path, :method => :get,:class =>"btn btn-primary") %>
 						<% end %>
 					</form>
      		</div>
@@ -59,6 +58,7 @@
   <div class="container">
     <p class="muted credit">Check Check </p>
   </div>
+
 </div><!--footer-->
 
 </body>
