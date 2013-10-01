@@ -7,8 +7,13 @@ gem 'rails', '3.2.14'
 
 gem 'sqlite3'
 
-gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
-                              :github => 'anjlab/bootstrap-rails'
+#gem 'anjlab-bootstrap-rails', :require => 'bootstrap-rails',
+#                              :github => 'anjlab/bootstrap-rails'
+
+#gem 'twitter-bootstrap-rails', :git => 'git://github.com/seyhunak/twitter-bootstrap-rails.git'
+gem "therubyracer"
+gem "less-rails" #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+gem "twitter-bootstrap-rails"
 
 gem 'devise', '~> 3.0.3'
 
