@@ -8,6 +8,4 @@ class SiteController < ApplicationController
   def apps
   end
 
-  def skins
-  end
 end

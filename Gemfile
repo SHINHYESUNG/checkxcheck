@@ -47,3 +47,6 @@ gem 'jquery-rails'
 
 # To use debugger
 # gem 'debugger'
+
+gem 'yahoo_weather'
+

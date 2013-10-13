@@ -1,16 +1,22 @@
 DoubleCheck::Application.routes.draw do
 
+  get "weather/load"
+
+  get "weather/weather"
+
+  resources :skins
+
+
   get "site/index"
 
   get "site/about"
 
   get "site/apps"
 
-  get "site/skins"
-
-  resources :products
-
-  devise_for :users
+  #original
+  devise_for :users 
+	#devise_for(:users, :controllers => { :sessions => "sessions" })
+	
 
 	match '/home', :to => 'site#index'
   match '/about', :to => 'site#about'

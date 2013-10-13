@@ -7,7 +7,7 @@
   <%= csrf_meta_tags %>
 </head>
 <body>
-
+<%= render partial: "shared/flash_messages", flash: flash %> 
 <!-- Wrap all page content here -->
 <div id="wrap">
   <!--Fixed navbar-->
@@ -32,7 +32,10 @@
 						<%= link_to("Apps",     { :action => "apps",:controller => "/site"  }) %>
 						</li>
 			  		<li class="<%= 'active' if params[:action] == 'skins' %>">
-						<%= link_to("Skins",     { :action => "index",:controller => "/products"}) %>
+						<%= link_to("Skins",     { :action => "index",:controller => "/skins"}) %>
+						</li>
+			  		<li class="<%= 'active' if params[:action] == 'weather' %>">
+						<%= link_to("Weather Test",     { :action => "load",:controller => "/weather"}) %>
 						</li>
    			 	</ul>
 					<form class="navbar-form pull-right">
@@ -41,6 +44,7 @@
 			 			<% else %> 
 			 			 <%= link_to('Sign up', new_user_registration_path , :method => :get,:class =>"btn btn-info") %>
 			 			 <%= link_to('Sign in', new_user_session_path, :method => :get,:class =>"btn btn-primary") %>
+						 
 						<% end %>
 					</form>
      		</div>
