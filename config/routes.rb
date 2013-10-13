@@ -13,9 +13,10 @@ DoubleCheck::Application.routes.draw do
 
   get "site/apps"
 
-  #original
-  devise_for :users 
+  
+  #devise_for :users 
 	#devise_for(:users, :controllers => { :sessions => "sessions" })
+  devise_for :users, :controllers => {:registrations => "registrations"}
 	
 
 	match '/home', :to => 'site#index'
