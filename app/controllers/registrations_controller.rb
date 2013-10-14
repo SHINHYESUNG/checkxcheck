@@ -41,8 +41,8 @@ class RegistrationsController < Devise::RegistrationsController
         @user = User.create(params[:user])
 
         if @user.save
-          render :status => 200,
-                  :json => {:status=>200,:user => @user}
+          
+           render :json => {:status=>200 , :email => @user.email ,:auth_token =>@user.authentication_token}
         else
           render :status => 400,
                  :json => {:status=>400, :message => @user.errors.full_messages}
