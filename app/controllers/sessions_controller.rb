@@ -1,58 +1,42 @@
 class SessionsController < Devise::SessionsController  
   def create  
-    def create
-      respond_to do |format|
-        format.html {
-          super
-        }
-        format.json {
-          if params[:user][:email].nil?
-            render :status => 400,
-                   :json => {:status => 400, :message => 'User request must contain the user email.'}
-            return
-          elsif params[:user][:password].nil?
-            render :status => 400,
-                   :json => {:status => 400,:message => 'User request must contain the user password.'}
-            return
-          end
+    respond_to do |format|
+      format.html {
+        super
+      }
+      format.json {
+        if params[:user][:email].nil?
+          render :status => 400,
+                 :json => {:status => 400, :message => 'User request must contain the user email.'}
+          return
+        elsif params[:user][:password].nil?
+          render :status => 400,
+                 :json => {:status => 400,:message => 'User request must contain the user password.'}
+          return
+        end                 
 
-          if params[:user][:email]
-            duplicate_user = User.find_by_email(params[:user][:email])
-            unless duplicate_user.nil?
-              render :status => 409,
-                     :json => {:status=>409, :message => 'Duplicate email. A user already exists with that email address.'}
-              return
-            end
-          end
+      
+        resource = warden.authenticate!(:scope => resource_name, :recall => "#{controller_path}#failure")
+            return sign_in(resource_name, resource)
         
-          if params[:user][:password].length <8 
-            render :status => 400,
-                   :json => {:status => 400, :message => 'Password is too short (minimum is 8 characters).'}
-            return
-          end    
-        
-          if params[:user][:password]!= params[:user][:password_confirmation]
-            render :status => 400,
-                   :json => {:status => 400, :message => 'Password does not match confirmation.'}
-            return
-          end 
-                 
-
-          @user = User.create(params[:user])
-
-          if @user.save
-          
-             render :json => {:status=>200 ,:message =>@user.authentication_token, :user => @user }
-          else
-            render :status => 400,
-                   :json => {:status=>400, :message => @user.errors.full_messages}
-          end
-        }
-      end
-    end
+      }
+    end  
   end  
   
   def destroy  
     super  
   end  
+  
+  def sign_in(resource_or_scope, resource=nil)
+    scope = Devise::Mapping.find_scope!(resource_or_scope)
+    resource ||= resource_or_scope
+    sign_in(scope, resource) unless warden.user(scope) == resource
+    return render :json => {:status => 200 , :email => resource.email ,:auth_token =>resource.authentication_token}
+  end
+ 
+  def failure
+    #return render:json => {:success => false, :errors => ["Login failed."]}
+    return render :json => {:status => 400,  :message => 'Login failed.'}
+  end
+    
 end  
