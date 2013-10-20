@@ -12,7 +12,7 @@ DoubleCheck::Application.routes.draw do
   namespace :api do
     namespace :v1 do
       #resources :weather 
-        resources :weather, :only => [ :index , :create ]
+        resources :weather, :only => [  :create ]
     end
   end
   
