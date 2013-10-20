@@ -1,8 +1,6 @@
 DoubleCheck::Application.routes.draw do
 
-  get "weather/load"
-
-  get "weather/weather"
+  get "weather/check"
 
   resources :skins
 
@@ -13,11 +11,18 @@ DoubleCheck::Application.routes.draw do
 
   get "site/apps"
 
+  namespace :api do
+    namespace :v1 do
+      resources :weather , :only => [ :index ]
+       # resources :weather, :only => [ :check ]
+    end
+  end
   
   #devise_for :users 
 	#devise_for(:users, :controllers => { :sessions => "sessions" })
-  devise_for :users, :controllers => {:registrations => "registrations",:sessions => "sessions"}
-	
+  devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"} 
+   # devise_for :users, :controllers => {:registrations => "registrations"}
+   
 
 	match '/home', :to => 'site#index'
   match '/about', :to => 'site#about'

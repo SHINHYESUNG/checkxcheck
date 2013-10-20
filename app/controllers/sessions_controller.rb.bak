@@ -10,10 +10,12 @@ class SessionsController < Devise::SessionsController
                   
       format.json {
         if params[:user][:email].nil?
-          render :json => {:status => 400, :message => 'User request must contain the user email.'}
+          render :status => 400,
+                 :json => {:status => 400, :message => 'User request must contain the user email.'}
           return
         elsif params[:user][:password].nil?
-          render :json => {:status => 400,:message => 'User request must contain the user password.'}
+          render :status => 400,
+                 :json => {:status => 400,:message => 'User request must contain the user password.'}
           return
         end                 
           
