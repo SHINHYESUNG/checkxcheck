@@ -50,3 +50,5 @@ gem 'jquery-rails'
 
 gem 'yahoo_weather'
 
+gem 'activemerchant'
+

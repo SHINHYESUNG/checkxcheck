@@ -22,20 +22,20 @@
     		<a class="brand" href="#">Check Check</a>
 				<div class="nav-collapse collapse">
     			<ul class="nav">
-   		  		<li class="<%= 'active' if params[:action] == 'index' %>"> 
+   		  		<li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'index') %>"> 
 						<%= link_to("Home",     { :action => "index",:controller => "/site" }) %>
 						</li>
-	  				<li class="<%= 'active' if params[:action] == 'about' %>">
+	  				<li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'about') %>">
 						<%= link_to("About", { :action => "about",:controller => "/site" }) %> 
 						</li>
-	  				<li class="<%= 'active' if params[:action] == 'apps' %>">
+	  				<li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'apps') %>">
 						<%= link_to("Apps",     { :action => "apps",:controller => "/site"  }) %>
 						</li>
-			  		<li class="<%= 'active' if params[:action] == 'skins' %>">
+			  		<li class="<%= 'active' if (params[:controller]== 'skins' && params[:action] == 'index') %>">
 						<%= link_to("Skins",     { :action => "index",:controller => "/skins"}) %>
 						</li>
-			  		<li class="<%= 'active' if params[:action] == 'weather' %>">
-						<%= link_to("Weather Test",     { :action => "index",:controller => "/api/v1/weather"}) %>
+				  	<li class="<%= 'active' if (params[:controller]== 'itempacks' && params[:action] == 'index') %>">
+							<%= link_to("Item Packs",     { :action => "index",:controller => "/itempacks"}) %>
 						</li>
    			 	</ul>
 					<form class="navbar-form pull-right">

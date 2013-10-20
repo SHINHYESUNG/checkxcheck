@@ -1,0 +1,17 @@
+<%= form_for(@itempack) do |f| %>
+  <% if @itempack.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@itempack.errors.count, "error") %> prohibited this itempack from being saved:</h2>
+
+      <ul>
+      <% @itempack.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

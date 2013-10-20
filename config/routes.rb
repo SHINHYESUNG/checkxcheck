@@ -1,5 +1,8 @@
 DoubleCheck::Application.routes.draw do
 
+  resources :itempacks
+
+
   resources :skins
 
 
@@ -9,12 +12,6 @@ DoubleCheck::Application.routes.draw do
 
   get "site/apps"
 
-  namespace :api do
-    namespace :v1 do
-      #resources :weather 
-        resources :weather, :only => [  :create ]
-    end
-  end
   
   #devise_for :users 
 	#devise_for(:users, :controllers => { :sessions => "sessions" })
@@ -26,6 +23,16 @@ DoubleCheck::Application.routes.draw do
   match '/about', :to => 'site#about'
   match '/apps', :to => 'site#apps'
  
+ 
+  namespace :api do
+    namespace :v1 do
+      #resources :weather 
+        resources :weather, :only => [  :create ]
+    end
+  end
+  
+  get "paypal_express/checkout"
+  
    
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,0 +1,25 @@
+<h1>Listing itempacks</h1>
+
+<table>
+  <tr>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+
+<% @itempacks.each do |itempack| %>
+  <tr>
+    <td><%= link_to 'Show', itempack %></td>
+    <td><%= link_to 'Edit', edit_itempack_path(itempack) %></td>
+    <td><%= link_to 'Destroy', itempack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+
+<%= link_to 'New Itempack', new_itempack_path %>
+
+
+<%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), :controller => 'paypal_express', :action => 'checkout' %>
