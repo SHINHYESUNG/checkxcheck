@@ -1,7 +1,5 @@
 DoubleCheck::Application.routes.draw do
 
-  get "weather/check"
-
   resources :skins
 
 
@@ -13,8 +11,8 @@ DoubleCheck::Application.routes.draw do
 
   namespace :api do
     namespace :v1 do
-      resources :weather , :only => [ :index ]
-       # resources :weather, :only => [ :check ]
+      #resources :weather 
+        resources :weather, :only => [ :index , :create ]
     end
   end
   
