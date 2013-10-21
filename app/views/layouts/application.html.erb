@@ -66,7 +66,7 @@
 	
   <div class="container">
 	 <p class="pull-right footer-p"><a href="#">Back to top</a></p>
-	 <p class="muted credit"><%= image_tag("checkPointer.png", :alt => "check check logo") %> Check Check © 2013 <a href="#">   Privacy</a> · <a href="#"> Terms</a></p>
+	 <p class="muted credit"><%= image_tag("checkPointer.png", :alt => "check check logo") %> Check Check © 2013 <%= link_to("Privacy · Terms",     { :action => "privacyandterms",:controller => "/site"}) %></p>
   </div>
 </div>
 

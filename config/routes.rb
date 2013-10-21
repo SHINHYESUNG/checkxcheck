@@ -14,6 +14,8 @@ DoubleCheck::Application.routes.draw do
 
   get "site/developer"
    
+  get "site/privacyandterms"
+  
   #devise_for :users 
 	#devise_for(:users, :controllers => { :sessions => "sessions" })
   devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"} 
@@ -23,7 +25,8 @@ DoubleCheck::Application.routes.draw do
 	match '/home', :to => 'site#index'
   match '/about', :to => 'site#about'
   match '/apps', :to => 'site#apps'
- 
+  match '/developer', :to => 'site#developer'
+  match '/privacyandterms', :to => 'site#privacyandterms'
  
   namespace :api do
     namespace :v1 do

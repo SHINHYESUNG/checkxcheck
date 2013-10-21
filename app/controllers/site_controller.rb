@@ -10,4 +10,8 @@ class SiteController < ApplicationController
 
   def developer
   end
+  
+  def privacyandterms
+  end
+  
 end
