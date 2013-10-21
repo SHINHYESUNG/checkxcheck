@@ -29,12 +29,12 @@
 	  				<li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'about') %>">
 						<%= link_to("About", { :action => "about",:controller => "/site"}) %> 
 						</li>
-	  				<li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'apps') %>">
+	  				<!-- <li class="<%= 'active' if (params[:controller]== 'site' && params[:action] == 'apps') %>">
 						<%= link_to("Apps",     { :action => "apps",:controller => "/site"}) %>
 						</li>
 			  		<li class="<%= 'active' if (params[:controller]== 'skins' && params[:action] == 'index') %>">
 						<%= link_to("Skins",     { :action => "index",:controller => "/skins"}) %>
-						</li>
+						</li> -->
 				  	<li class="<%= 'active' if (params[:controller]== 'itempacks' && params[:action] == 'index') %>">
 							<%= link_to("Item Packs",     { :action => "index",:controller => "/itempacks"}) %>
 						</li>
