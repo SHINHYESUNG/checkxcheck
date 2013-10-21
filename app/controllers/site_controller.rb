@@ -8,4 +8,6 @@ class SiteController < ApplicationController
   def apps
   end
 
+  def developer
+  end
 end

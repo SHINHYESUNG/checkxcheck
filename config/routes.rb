@@ -12,7 +12,8 @@ DoubleCheck::Application.routes.draw do
 
   get "site/apps"
 
-  
+  get "site/developer"
+   
   #devise_for :users 
 	#devise_for(:users, :controllers => { :sessions => "sessions" })
   devise_for :users, :controllers => {:registrations => "registrations", :sessions => "sessions"} 
