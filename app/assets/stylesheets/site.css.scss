@@ -1,3 +1,38 @@
 // Place all the styles related to the Site controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.iphone-frame
+{
+
+width: 541px;
+height: 857px;
+top:-60px;
+left:0px;
+
+z-index:-10;
+}
+
+#myCarousel
+{
+
+left:31px;
+top:34px;
+
+}
+
+
+#gloss
+{
+
+left:282px;
+top:124px;
+
+}
+
+.carousel-control {
+	z-index:10;
+}
+.intro-para-image {
+float: left;
+}
