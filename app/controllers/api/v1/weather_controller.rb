@@ -28,7 +28,7 @@ class Api::V1::WeatherController < ApplicationController
  	 	 
          sunrise = response.astronomy.sunrise
          sunset = response.astronomy.sunset
-         render :json => {:location => "seoul", 
+         render :json => {:location => "Seoul", 
                           :temperature_F => temp_F,  :temperature_C => temp_C, 
                           :wind_direction => windDir, 
                           :condition_code => condition_code, :condition=> condition,                         
