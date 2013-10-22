@@ -1,6 +1,6 @@
-<h1>Listing itempacks</h1>
-
-<table>
+<h3>Item Packs</h3>
+<p>다양한 아이템 팩을 별도로 구매하실 수 있습니다.</p>
+<!-- <table>
   <tr>
     <th></th>
     <th></th>
@@ -14,12 +14,12 @@
     <td><%= link_to 'Destroy', itempack, method: :delete, data: { confirm: 'Are you sure?' } %></td>
   </tr>
 <% end %>
-</table>
+</table> -->
 
 <br />
 
 
-<%= link_to 'New Itempack', new_itempack_path %>
+<!-- <%= link_to 'New Itempack', new_itempack_path %> -->
 
 
 <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), :controller => 'paypal_express', :action => 'checkout' %>
@@ -27,17 +27,12 @@
 <div class="row">
 
         <div class="span4">
-			
-        		<img class="img-rounded" data-src="holder.js/320x480" alt="320x480" style="width: 320px; height: 480px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAFiUlEQVR4Xu3XR0tkaxCH8TJgFgOIuFAxgRsxDioq+NXNEcSAKBiXotPKjDkO9UKL40Ksa9n3dt3nrMaZ6jpT//r5ntMFmUzmRbhI4JMJFADmk0lRlhIADBBMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEoAMKa4KAYMBkwJAMYUF8WAwYApAcCY4qIYMBgwJQAYU1wUAwYDpgQAY4qLYsBgwJQAYExxUQwYDJgSAIwpLooBgwFTAoAxxUUxYDBgSgAwprgoBgwGTAkAxhQXxYDBgCkBwJjiohgwGDAlABhTXBQDBgOmBABjiotiwGDAlABgTHFRDBgMmBIAjCkuigGDAVMCgDHFRTFgMGBKADCmuCgGDAZMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEog78EcHh7K8fGxjIyMSFlZ2V/DZzIZ2d7eloqKCunv75eCggJ5eXmRra0tOTs7Sz+3t7dLS0vLp0PL9f0+/R/LUWHegrm4uBAFcXBwkKIaGxuT8vLy19gUxtTUlDw+PkpJSYmMj49LYWGhrK+vy+npqZSWlsr9/X0C1NPTI42NjR9Gnuv75Wj/5tvkLZjp6em08OylIN6eMHt7e3J0dJT+Wf9eQT09PYl+TuFMTEwkcAqotrZWuru7ZWNjQ4qKimRgYEAuLy9lZ2cnwerr65PZ2VnX+w0NDZmX9V/4QN6C0ZNDHymLi4tyc3OTTpAsGP15bm4uPWp+/fol19fXCcjDw0NafHFxcfo5C0h/1s+vra3J+fm51NfXy+3tbfpcV1eXtLa2ppPK+34KN9+uvAWTDVrB6GnwFszKykr6u8nJSVleXpa7u7vXE0VR1NXVyeDgYEKgJ44+svQEyoJ6fn5O7WtqauTHjx9/7dTzfgow365wYPRdY3V1VSorK6W5uVn29/dFAXR2dkpDQ0M6efQx8/YRlT1h9DdeX2r1M3oNDw9LdXX1h2C+ej/A5DiB97/xP3/+TI+W95di0FMo+0jSP+sppCeQfosaHR1NsGZmZtLJo5cC6+3t/RDMV+7HCZNjLHq7hYUFubq6en0k6dKzL8OKRB9PCkBPC33HmZ+fT+8mTU1N8vv374Smo6ND2traZHNzU05OTqSqqirVaK/336A87/cvxPXlW+b9I0lPCH2xff8t6e07joLRR5D+RiuupaWlhCH7nqLvM4pHcWmNvhArnN3d3dcXZP32pJfX/fLxhVfnz3sw/+RXRrHotyC99HH03Veu7/ed8/wvwXxnoNF7Ayb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHb/QHPfj21V94AuAAAAABJRU5ErkJggg==">
-          <!-- <h2>Android</h2> -->
-          <!-- <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Cras mattis consectetur purus sit amet fermentum. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</p> -->
-          <!-- <p><a class="btn" href="#">Play Store »</a></p> -->
-	 	
+			<%= image_tag "itemPack1.png" ,:class => "img-rounded" %>
         </div>
-		      <div class="span4">
-				  	<img class="img-rounded" data-src="holder.js/320x480" alt="320x480" style="width: 320px; height: 480px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAFiUlEQVR4Xu3XR0tkaxCH8TJgFgOIuFAxgRsxDioq+NXNEcSAKBiXotPKjDkO9UKL40Ksa9n3dt3nrMaZ6jpT//r5ntMFmUzmRbhI4JMJFADmk0lRlhIADBBMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEoAMKa4KAYMBkwJAMYUF8WAwYApAcCY4qIYMBgwJQAYU1wUAwYDpgQAY4qLYsBgwJQAYExxUQwYDJgSAIwpLooBgwFTAoAxxUUxYDBgSgAwprgoBgwGTAkAxhQXxYDBgCkBwJjiohgwGDAlABhTXBQDBgOmBABjiotiwGDAlABgTHFRDBgMmBIAjCkuigGDAVMCgDHFRTFgMGBKADCmuCgGDAZMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEog78EcHh7K8fGxjIyMSFlZ2V/DZzIZ2d7eloqKCunv75eCggJ5eXmRra0tOTs7Sz+3t7dLS0vLp0PL9f0+/R/LUWHegrm4uBAFcXBwkKIaGxuT8vLy19gUxtTUlDw+PkpJSYmMj49LYWGhrK+vy+npqZSWlsr9/X0C1NPTI42NjR9Gnuv75Wj/5tvkLZjp6em08OylIN6eMHt7e3J0dJT+Wf9eQT09PYl+TuFMTEwkcAqotrZWuru7ZWNjQ4qKimRgYEAuLy9lZ2cnwerr65PZ2VnX+w0NDZmX9V/4QN6C0ZNDHymLi4tyc3OTTpAsGP15bm4uPWp+/fol19fXCcjDw0NafHFxcfo5C0h/1s+vra3J+fm51NfXy+3tbfpcV1eXtLa2ppPK+34KN9+uvAWTDVrB6GnwFszKykr6u8nJSVleXpa7u7vXE0VR1NXVyeDgYEKgJ44+svQEyoJ6fn5O7WtqauTHjx9/7dTzfgow365wYPRdY3V1VSorK6W5uVn29/dFAXR2dkpDQ0M6efQx8/YRlT1h9DdeX2r1M3oNDw9LdXX1h2C+ej/A5DiB97/xP3/+TI+W95di0FMo+0jSP+sppCeQfosaHR1NsGZmZtLJo5cC6+3t/RDMV+7HCZNjLHq7hYUFubq6en0k6dKzL8OKRB9PCkBPC33HmZ+fT+8mTU1N8vv374Smo6ND2traZHNzU05OTqSqqirVaK/336A87/cvxPXlW+b9I0lPCH2xff8t6e07joLRR5D+RiuupaWlhCH7nqLvM4pHcWmNvhArnN3d3dcXZP32pJfX/fLxhVfnz3sw/+RXRrHotyC99HH03Veu7/ed8/wvwXxnoNF7Ayb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHb/QHPfj21V94AuAAAAABJRU5ErkJggg==">
-				   </div>
-	 		      <div class="span4">
-	 				  	<img class="img-rounded" data-src="holder.js/320x480" alt="320x480" style="width: 320px; height: 480px;" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAIwAAACMCAYAAACuwEE+AAAFiUlEQVR4Xu3XR0tkaxCH8TJgFgOIuFAxgRsxDioq+NXNEcSAKBiXotPKjDkO9UKL40Ksa9n3dt3nrMaZ6jpT//r5ntMFmUzmRbhI4JMJFADmk0lRlhIADBBMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEoAMKa4KAYMBkwJAMYUF8WAwYApAcCY4qIYMBgwJQAYU1wUAwYDpgQAY4qLYsBgwJQAYExxUQwYDJgSAIwpLooBgwFTAoAxxUUxYDBgSgAwprgoBgwGTAkAxhQXxYDBgCkBwJjiohgwGDAlABhTXBQDBgOmBABjiotiwGDAlABgTHFRDBgMmBIAjCkuigGDAVMCgDHFRTFgMGBKADCmuCgGDAZMCQDGFBfFgMGAKQHAmOKiGDAYMCUAGFNcFAMGA6YEAGOKi2LAYMCUAGBMcVEMGAyYEgCMKS6KAYMBUwKAMcVFMWAwYEog78EcHh7K8fGxjIyMSFlZ2V/DZzIZ2d7eloqKCunv75eCggJ5eXmRra0tOTs7Sz+3t7dLS0vLp0PL9f0+/R/LUWHegrm4uBAFcXBwkKIaGxuT8vLy19gUxtTUlDw+PkpJSYmMj49LYWGhrK+vy+npqZSWlsr9/X0C1NPTI42NjR9Gnuv75Wj/5tvkLZjp6em08OylIN6eMHt7e3J0dJT+Wf9eQT09PYl+TuFMTEwkcAqotrZWuru7ZWNjQ4qKimRgYEAuLy9lZ2cnwerr65PZ2VnX+w0NDZmX9V/4QN6C0ZNDHymLi4tyc3OTTpAsGP15bm4uPWp+/fol19fXCcjDw0NafHFxcfo5C0h/1s+vra3J+fm51NfXy+3tbfpcV1eXtLa2ppPK+34KN9+uvAWTDVrB6GnwFszKykr6u8nJSVleXpa7u7vXE0VR1NXVyeDgYEKgJ44+svQEyoJ6fn5O7WtqauTHjx9/7dTzfgow365wYPRdY3V1VSorK6W5uVn29/dFAXR2dkpDQ0M6efQx8/YRlT1h9DdeX2r1M3oNDw9LdXX1h2C+ej/A5DiB97/xP3/+TI+W95di0FMo+0jSP+sppCeQfosaHR1NsGZmZtLJo5cC6+3t/RDMV+7HCZNjLHq7hYUFubq6en0k6dKzL8OKRB9PCkBPC33HmZ+fT+8mTU1N8vv374Smo6ND2traZHNzU05OTqSqqirVaK/336A87/cvxPXlW+b9I0lPCH2xff8t6e07joLRR5D+RiuupaWlhCH7nqLvM4pHcWmNvhArnN3d3dcXZP32pJfX/fLxhVfnz3sw/+RXRrHotyC99HH03Veu7/ed8/wvwXxnoNF7Ayb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHbASb6hp3nA4xzoNHb/QHPfj21V94AuAAAAABJRU5ErkJggg==">
-	 				   </div>
-      </div>
+		<div class="span4">
+			<%= image_tag "itemPack2.png" ,:class => "img-rounded" %>
+		</div>
+	    <div class="span4">
+	 	   <%= image_tag "itemPackComingSoon.png" ,:class => "img-rounded" %>
+	   </div>
+</div>
