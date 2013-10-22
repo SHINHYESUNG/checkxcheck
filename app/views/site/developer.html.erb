@@ -1,26 +1,38 @@
 <!-- <h1>Site#developer</h1>
 <p>Find me in app/views/site/developer.html.erb</p> -->
-<h1>
-CheckCheck presents the weather API for <br>
-the 3rd party usage.  
-</h1>
+<div>
+<%= image_tag "weather.png" ,:class => "intro-para-image"  %>
+<h2>Weather API </h2> <br>
+</div>
+<h4>
+	Check Check 는 3rd Party 사용을 위한 
+	Weather API를 제공합니다. <br>
+</h4>
+
 <br>
 <br>
+
 <br>
-<br>
-<br>
-<br>
-<p>
-Request:<br> 
+<div class="p-group" style="padding-left: 60px">
+<p><h5>
+Request: 
+</h5></p>
+<p style="padding-left: 20px">
 	URL: http://ec2-54-238-163-63.ap-northeast-1.compute.amazonaws.com/api/v1/weather.json <br>
 	Method: POST <br>
-    JSON: {"weather": {"longitude":"37.5665","latitude":"126.9780"}} <br>
+    JSON: {"weather": {"longitude":"126.9780","latitude":"37.5665"}} <br>
 </p> 
 
 <br>
 <br>
-<p>
-Response: <br>
-	JSON: {"location":"Seoul", "temperature_F":57, "temperature_C":13, <br>
-	       "wind_direction":"N", "condition_code":29, "condition":"Partly cloudy (night)", <br> 				"sunrise":"2013-10-20T06:44:00+00:00", "sunset":"2013-10-20T17:47:00+00:00"} <br>
-</p> <br>
+<p><h5>
+Response: 
+</h5></p>
+
+<p style="padding-left: 20px">
+	JSON: {"location":"Seoul", "temperature_F":57, "temperature_C":13, <br> 
+	"wind_direction":"N", "condition_code":29, "condition":"Partly cloudy (night)", <br>
+	"sunrise":"2013-10-20T06:44:00+00:00", "sunset":"2013-10-20T17:47:00+00:00"} <br>
+</p> 
+
+</div>
