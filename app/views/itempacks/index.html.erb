@@ -24,15 +24,17 @@
 
 <%= link_to image_tag("https://www.paypal.com/en_US/i/btn/btn_xpressCheckout.gif"), :controller => 'paypal_express', :action => 'checkout' %>
 
-<div class="row">
+<div class="row" style="margin-top:50px;" >
 
-        <div class="span4">
+        <div class="span4" >
+			<div style="padding-bottom:50px;" >
 			<%= image_tag "itemPack1.png" ,:class => "img-rounded" %>
+			</div>
         </div>
-		<div class="span4">
+		<div class="span4" style="padding-bottom:50px;">
 			<%= image_tag "itemPack2.png" ,:class => "img-rounded" %>
 		</div>
-	    <div class="span4">
+	    <div class="span4" style="padding-bottom:50px;">
 	 	   <%= image_tag "itemPackComingSoon.png" ,:class => "img-rounded" %>
 	   </div>
 </div>
