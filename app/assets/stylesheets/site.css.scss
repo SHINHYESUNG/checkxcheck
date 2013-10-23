@@ -2,23 +2,33 @@
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
 
+.group-frame-carousel
+{
+position:absolute;
+}
 .iphone-frame
 {
 
 width: 541px;
 height: 857px;
-top:-60px;
+position:absolute;
+//top:-60px;
+//left:0px;
 left:0px;
-
+top:0px;
 z-index:-10;
 }
 
 #myCarousel
 {
 
-left:31px;
-top:34px;
+//left:31px;
+//top:-703px;
 
+position:absolute;
+left:106px;
+top:153px;
+//z-index:-1023;
 }
 
 
@@ -35,6 +45,8 @@ top:124px;
 }
 .intro-para-image {
 float: left;
+margin-top:40px;
+margin-right:20px;
 }
 
 .p-indent

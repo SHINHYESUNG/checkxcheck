@@ -1,12 +1,12 @@
 <!-- <h1>Site#index</h1>
 <p>Find me in app/views/site/index.html.erb</p> -->
 <div class="row">
-	<div class="span5">
-		<!-- <ul class="nav nav-list bs-docs-sidenav affix" >		 -->
-			<div class="iphone-frame sidebar affix">	
+	<div class="span7">
+		<div class ="group-frame-carousel sidebar hidden-phone" style ="margin-top:-55px;">
+			<div class="iphone-frame sidebar ">	
 				 <%= image_tag "iphone.png" %>
 			</div> <!-- iphone-frame div end -->
-		<ul class="nav nav-list bs-docs-sidenav affix">		
+		<ul class="nav nav-list bs-docs-sidenav ">		
 		<div id="myCarousel" class="carousel slide">
   		  <ol class="carousel-indicators">
    		   <li data-target="#myCarousel" data-slide-to="0" class="active"></li>
@@ -54,22 +54,21 @@
   		<a class="carousel-control right" href="#myCarousel" data-slide="next">&rsaquo;</a>
 		</div>
 	</ul>
-	<!-- <div id = "gloss" class = "sidebar affix">
-		 <%= image_tag "gloss.png" %>
-	</div> -->
+	</div>
 	
 	</div>
-	<div class="span7" >
-		
+	<div class="span5" style ="padding-top:60px;" >
+					<div class="group-main-intro-texts" style="margin-left:-50px; margin-top:-40px;">
 		            <div data-spy="scroll" data-target="#navbarExample" data-offset="0" class="scrollspy-example">
 						
 		               <div id="intro">
 						   <br>
 						  <%= image_tag "alarm.png" ,:class => "intro-para-image"  %>
 						<h4 id="fat"> 알람</h4>
-		                  <p> 연필과 지우개를 놓고 토익시험장에 가거나<br>
-							   지갑을 두고 나가서 곤혹스러운 적이 있나요?<br>
-							아침에 챙겨야 할 물건들을 간단히 등록만 하세요.<br>
+						
+		                  <p> 연필과 지우개를 놓고 토익시험장에 가거나
+							   지갑을 두고 나가서 곤혹스러운 적이 있나요?
+							아침에 챙겨야 할 물건들을 간단히 등록만 하세요.
 							CheckCheck가 여러분의 바쁜 아침을 도와드릴 것입니다.</p>
 							<br>
 							
@@ -78,8 +77,8 @@
 							<br>
 						  <%= image_tag "weather.png" ,:class => "intro-para-image"  %>
 		                <h4 id="mdo">날씨</h4>
-		                <p> 아침에 챙겨야 할 물건들만 챙겼다고 다가 아니죠?<br>
-							집을 나갔는데 갑작스럽게 비가 온다면 당황스럽죠?<br>
+		                <p> 아침에 챙겨야 할 물건들만 챙겼다고 다가 아니죠?
+							집을 나갔는데 갑작스럽게 비가 온다면 당황스럽죠?
 							아침 날씨도 자동으로 체크해주는 센스까지!</p>
 							<br>
 						</div>
@@ -88,20 +87,21 @@
 							<br>
 							  <%= image_tag "itemPacks.png" ,:class => "intro-para-image"  %>
 		                <h4 id="one">쇼핑</h4>
-		                <p>아이콘 세트를 추가로 더 구매하실 수 있습니다.<br>
-							기본 아이콘도 예쁘지만 <br>
+		                <p>아이콘 세트를 추가로 더 구매하실 수 있습니다.
+							기본 아이콘도 예쁘지만 
 							여러분만의 아이콘과 배경을 설치해보세요.</p>
 					   </div>
-					   <br><br><br><br>
-					   <div class="row" id="store-link">
-						   <div class="span2"> 
+					   <br><br><br>
+					   <div classs="group-store-link" style="padding-left = 50px;">
+						   <div class="AppStore"> 
 					     <%= image_tag "btnAppStore.png" , :class => "intro-para-image"  %> </div>
-						  <div class="span2"> 
+						  <div class="GooglePlay"> 
 					      <%= image_tag "btnGooglePlay.png"  , :class => "intro-para-image"  %> </div>
 					     </div>
 				
 		
 		           </div>
+			   </div>
 		      
 	
 	</div>
