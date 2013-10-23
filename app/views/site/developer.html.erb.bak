@@ -1,14 +1,11 @@
 <!-- <h1>Site#developer</h1>
 <p>Find me in app/views/site/developer.html.erb</p> -->
 <div class="row">
-	<div class="span2">
+	<div class="span12">
 <div>
-
-<%= image_tag "weather.png",  :class => "developer-page-image" %>
+<%= image_tag "weather.png" ,:class => "developer-page-image"  %>
 </div>
-</div>
-<div class="span10">
-<div style ="padding-top:25px;">
+<div style="padding-top:30px;">
 <h2>Weather API </h2> <br>
 <p>
 	Check Check 는 3rd Party 사용을 위한 Weather API를 제공합니다. <br>
@@ -19,15 +16,13 @@
 <br>
 
 <br>
-<div class="p-group" >
+<div class="p-group" style="padding-left: 130px">
 <p><h5>
 Request: 
 </h5></p>
 <p style="padding-left: 20px">
 	URL: http://ec2-54-238-163-63.ap-northeast-1.compute.amazonaws.com/api/v1/weather.json <br>
-	<br>
 	Method: POST <br>
-	<br>
     JSON: {"weather": {"longitude":"126.9780","latitude":"37.5665"}} <br>
 </p> 
 
